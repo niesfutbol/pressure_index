@@ -49,8 +49,8 @@ mean_team_xg <- to_vec(for (team in names) mean(all_team_stats[[team]]$xG, na.rm
 mean_build_up_disruption <- to_vec(for (team in names) mean(all_rivals_team[[team]]$build_up, na.rm = TRUE))
 mean_ppda <- to_vec(for (team in names) mean(all_team_stats[[team]]$PPDA, rm.rm = TRUE))
 mean_c_p <- to_vec(for (team in names) mean(all_rivals_team[[team]]$chance_prevention, rm.rm = TRUE))
-mean_h_l <- to_vec(for (team in names) mean(all_rivals_team[[team]]$high_line , rm.rm = TRUE))
-mean_p_r <- to_vec(for (team in names) mean((all_team_stats[[team]]$Passes - all_team_stats[[team]]$Passes_to_final_third)/(all_team_stats[[team]]$Losses_Low + all_team_stats[[team]]$Losses_Medium) , rm.rm = TRUE))
+mean_h_l <- to_vec(for (team in names) mean(all_rivals_team[[team]]$high_line, rm.rm = TRUE))
+mean_p_r <- to_vec(for (team in names) mean((all_team_stats[[team]]$Passes - all_team_stats[[team]]$Passes_to_final_third) / (all_team_stats[[team]]$Losses_Low + all_team_stats[[team]]$Losses_Medium), rm.rm = TRUE))
 build_up_teams <- tibble(
   "team" = names,
   xG = mean_team_xg,
