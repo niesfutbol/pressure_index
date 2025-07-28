@@ -1,0 +1,567 @@
+{
+    "name": "change-me",
+    "schema": "tabular-data-package",
+    "profile": "tabular-data-package",
+    "resources": [
+        {
+            "path": "tests/data/tijuana.csv",
+            "profile": "tabular-data-resource",
+            "name": "tijuana",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "encoding": "utf-8",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "date",
+                        "type": "date",
+                        "format": "default"
+                    },
+                    {
+                        "name": "match",
+                        "type": "string",
+                        "format": "default"
+                    },
+                    {
+                        "name": "competition",
+                        "type": "string",
+                        "format": "default"
+                    },
+                    {
+                        "name": "duration",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "team",
+                        "type": "string",
+                        "format": "default"
+                    },
+                    {
+                        "name": "scheme",
+                        "type": "string",
+                        "format": "default"
+                    },
+                    {
+                        "name": "goals",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "x_g",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "shots",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "j",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "k",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "passes",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "passSuccess",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "n",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "possession_percent",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "losses",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "losses_low",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "losses_medium",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "s",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "recoveries",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "u",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "v",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "w",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "duels_won",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "y",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "z",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "shots_from_outside_penalty_area_on_target",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "bb",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "cc",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "positional_attacks_with_shots",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "ee",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "ff",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "counterattacks",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "hh",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "ii",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "set_pieces_with_shots",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "kk",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "ll",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "corners_with_shots",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "nn",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "oo",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "free_kicks_with_shots",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "qq",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "rr",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "penalties_converted",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "tt",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "uu",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "crosses",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "ww",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "xx",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "deep_completed_crosses",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "deep_completed_passes",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "penalty_area_entries_runs_crosses",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "bbb",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "ccc",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "touches_in_penalty_area",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "offensive_duels_won",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "fff",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "ggg",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "offsides",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "conceded_goals",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "shots_against_on_target",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "kkk",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "lll",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "defensive_duels_won",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "nnn",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "ooo",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "aerial_duels_won",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "qqq",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "rrr",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "sliding_tackles_successful",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "ttt",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "uuu",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "interceptions",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "clearances",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "fouls",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "yellow_cards",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "red_cards",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "forward_passes_accurate",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "bbbb",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "cccc",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "back_passes_accurate",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "eeee",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "ffff",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "lateral_passes_accurate",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "hhhh",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "iiii",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "long_passes",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "kkkk",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "llll",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "passes_to_final_third",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "nnnn",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "oooo",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "progressive_passes",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "qqqq",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "rrrr",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "smart_passes_accurate",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "tttt",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "uuuu",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "throw_ins_accurate",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "wwww",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "xxxx",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "goal_kicks",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "match_tempo",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "average_passes_per_possession",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "long_pass_percent",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "average_shot_distance",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "average_pass_length",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "ppda",
+                        "type": "number",
+                        "format": "default"
+                    }
+                ],
+                "missingValues": [
+                    ""
+                ]
+            }
+        }
+    ]
+}
