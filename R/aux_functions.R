@@ -15,6 +15,13 @@ obtain_files_names <- function(path_directory) {
 }
 
 .remove_suffixes <- function(names_with_xlsx) {
-  lists_cleaned_names <- names_with_xlsx |> stringr::str_split(".csv")
+  lists_cleaned_names <-  stringr::str_split(names_with_xlsx, "\\.")
   comprehenr::to_vec(for (team in lists_cleaned_names) team[1])
+}
+
+#' @export
+obtain_json_files_names <- function(path_directory) {
+  raw_files_name <- list.files(path = path_directory, pattern = "json$")
+  files_name <- comprehenr::to_vec(for (team in raw_files_name) if(team != "datapackage.json") team)
+  .clean_files_name(files_name)
 }
