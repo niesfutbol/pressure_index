@@ -4,26 +4,26 @@ library(zoo)
 metric_names <- list("passes_per_possession_minute" = "Tempo", "xg_shot" = "xG", "ppda" = "PPDA", "goal" = "Goles")
 team_name <- "toluca"
 the_team_path <- glue::glue("/workdir/data/{team_name}_team.csv")
-data <- read_csv(the_team_path, show_col_types = FALSE) |>
+data <- readr::read_csv(the_team_path, show_col_types = FALSE) |>
   dplyr::mutate(attack = 0.7 * xg_shot + 0.3 * goal)
 
 matches_path <- glue::glue("/workdir/data/{team_name}_matches.csv")
-matches <- read_csv(matches_path, show_col_types = FALSE) |>
+matches <- readr::read_csv(matches_path, show_col_types = FALSE) |>
   dplyr::select(date, name, competition)
 
 metric <- "ppda"
 random_team <- data |>
-  sample_n(nrow(data)) |>
-  mutate(
+  dplyr::sample_n(nrow(data)) |>
+  dplyr::mutate(
     mean = zoo::rollapply(!!sym(metric), width = 4, mean, fill = NA, align = "left"),
     sd = zoo::rollapply(!!sym(metric), width = 4, sd, fill = NA, align = "left")
   )
 
 team_mean <- random_team |>
-  pull(mean) |>
+  dplyr::pull(mean) |>
   mean(na.rm = TRUE)
 team_sd <- random_team |>
-  pull(mean) |>
+  dplyr::pull(mean) |>
   sd(na.rm = TRUE)
 
 statistics <- list(
@@ -32,7 +32,7 @@ statistics <- list(
 )
 
 chart <- data |>
-  mutate(
+  dplyr::mutate(
     mean = zoo::rollapply(!!sym(metric), width = 4, mean, fill = NA, align = "left")
   )
 
@@ -50,7 +50,7 @@ to_plot |>
     y = y_label
   ) +
   theme_minimal() + # Un tema limpio para el gráfico
-  scale_x_date(date_breaks = "3 months", date_labels = "%b %Y") +
+  scale_x_date(date_breaks = "2 months", date_labels = "%b %Y") +
   geom_ribbon(aes(ymin = statistics$mean - 3 * statistics$sd, ymax = statistics$mean + 3 * statistics$sd), fill = "red") +
   geom_ribbon(aes(ymin = statistics$mean - 2 * statistics$sd, ymax = statistics$mean + 2 * statistics$sd), fill = "orange") +
   geom_ribbon(aes(ymin = statistics$mean - statistics$sd, ymax = statistics$mean + statistics$sd), fill = "yellow") +
